@@ -1,0 +1,43 @@
+graph TD;
+    %% Vistas principales
+
+    
+    V1[Views] --> V2[home/index.php]
+    V1 --> V3[login.php]
+    V1 --> V4[registro.php]
+    
+    %% Controladores
+    C1[Controller] --> C2[ABMUsuario.php]
+    
+    %% Modelos
+    M1[Models] --> M2[BaseDatos.php]
+    M1 --> M3[Usuario.php]
+
+    %% Acciones
+    V5[Views/Action] --> A1[actionLogin.php]
+    V5 --> A2[actionRegistro.php]
+    
+    %% Utilidades
+    U1[Utils] --> U2[datasubmitter.js]
+    U1 --> U3[validar.js]
+
+    %% CSS
+    CSS[Views/CSS] --> E1[estructura/footer.php]
+    CSS --> E2[estructura/nav.php]
+    
+    %% Relaciones
+    V3 --> A1
+    V4 --> A2
+    A2 --> C2
+    A1 --> C2
+    C2 --> M3
+    C2 --> M2
+    M3 --> M2
+
+    %% Comentarios:
+    %% login.php usa actionLogin.php
+    %% registro.php usa actionRegistro.php
+    %% actionRegistro.php interactúa con ABMUsuario.php
+    %% actionLogin.php interactúa con ABMUsuario.php
+    %% ABMUsuario.php usa Usuario.php y BaseDatos.php
+    %% Usuario.php depende de BaseDatos.php

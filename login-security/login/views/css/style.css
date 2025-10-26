@@ -1,0 +1,108 @@
+/* dfsegdfvd */
+body {
+    font-family: 'Righteous', cursive !important;
+    color: #ffffff;
+    background: url('./6193485.jpg') no-repeat center center fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180%;
+    background-size: cover;
+    filter: blur(0px);
+    z-index: -1;
+}
+
+nav {
+    background-color: #000000bd;
+   
+    top: 0;
+
+
+
+}
+
+.navbar-brand,
+.nav-link {
+    color: #00ff00 !important;
+    /* Verde Neón */
+}
+
+.nav-link:hover {
+    color: #000000 !important;
+    background-color: #00ff00;
+    /* Hover con fondo verde neón */
+    border-radius: 5px;
+}
+
+.navbar-brand:hover {
+    color: #00cc00 !important;
+    /* Efecto en la marca */
+}
+
+.dropdown-menu {
+    background-color: #000000;
+    border-color: #00ff00;
+}
+
+.dropdown-item {
+    color: #00ff00 !important;
+}
+
+.dropdown-item:hover {
+    background-color: #00ff00;
+    color: #000000 !important;
+}
+
+
+h2 {
+    color: #00ff00;
+}
+
+h1 {
+    color: #00ff00;
+}
+
+h4 {
+    color: #00ff00;
+}
+
+h3 {
+    color: #00ff00;
+}
+
+a {
+    font-size: 125%;
+}
+
+/*efecto letras*/
+canvas {
+    pointer-events: none;
+}
+
+/*barra scroll*/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Estilo para el "thumb" de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background-color: #00ff00;
+    /* Verde neón */
+    border-radius: 6px;
+    border: 3px solid #000;
+    /* Borde negro para contraste */
+}
+
+/* Estilo para el "track" de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background-color: #111;
+    /* Fondo oscuro para contraste */
+}
+
+/* Para Firefox (versión 64 y posteriores) */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #00ff00 #111;
+}
