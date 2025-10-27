@@ -1,9 +1,10 @@
 <?php
 
 
+
 include_once '../controller/ABMusuario.php'; // Incluye el controlador de usuarios
 
-
+require_once './estructura/nav.php'; // Incluye la barra de navegación 
 
 $abmUsuario = new ABMUsuario();
 $usuarios = $abmUsuario->buscar(null); // Busca todos los usuarios

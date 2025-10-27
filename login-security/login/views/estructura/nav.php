@@ -22,10 +22,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="./login.php"></a>
+                    <a class="nav-link" href="http://localhost/TP5/register-login-listen/login-security/login/views/listarUsuario.php">Listar usuarios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./registro.php"></a>
+                    <a class="nav-link" href=""></a>
                 </li>  
 
             </ul>
