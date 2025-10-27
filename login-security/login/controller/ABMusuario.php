@@ -1,5 +1,9 @@
 <?php
 
+
+require_once '../models/conector/BaseDatos.php';
+require_once '../models/Usuario.php';
+
 class ABMUsuario
 {
     // Método principal para manejar altas, bajas y modificaciones
@@ -119,12 +123,15 @@ class ABMUsuario
         return $resp; // Devuelve true si la modificación fue exitosa, de lo contrario false
     }
 
+
+
+
     public function obtenerPorEmail($db, $email)
     {
 
         try {
             // Se define la consulta SQL para seleccionar todos los datos del usuario cuyo email coincida.
-            $query = "SELECT * FROM usuarios WHERE email = :email LIMIT 1";
+            $query = "SELECT * FROM usuario WHERE email = :email LIMIT 1";
 
             // Se prepara la consulta para prevenir inyecciones SQL y mejorar el rendimiento.
             $stmt = $db->prepare($query);
@@ -154,6 +161,10 @@ class ABMUsuario
             return null;
         }
     }
+
+
+
+
 
     /**
      * Permite buscar usuarios en la base de datos según criterios

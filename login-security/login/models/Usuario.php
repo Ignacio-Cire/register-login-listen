@@ -142,6 +142,51 @@ public function modificar()
 
 
 
+
+    /**
+     * Busca en la base de datos y devuelve un arreglo de objetos Usuario.
+     * 
+     */
+    public function listar($where = "1=1")
+    {
+        $arregloUsuarios = array();
+        
+        // No seleccionamos la contraseña por seguridad
+        $sql = "SELECT id, nombreUsuario, email FROM usuario WHERE " . $where;
+
+        if ($this->Iniciar()) {
+            
+            // 1. Ejecutamos la consulta. 
+            // Tu método Ejecutar() llama a EjecutarSelect() y guarda el resultado.
+            // Devuelve la cantidad de filas.
+            $cantidad = $this->Ejecutar($sql);
+
+            if ($cantidad > 0) {
+                
+                // 2. Iteramos sobre los resultados guardados
+                // Tu método Registro() va entregando fila por fila
+                while ($fila = $this->Registro()) {
+                    
+                    // 3. Creamos un objeto Usuario por cada fila
+                    $obj = new Usuario();
+
+                    // 4. Seteamos los datos usando los setters
+                    $obj->setId($fila['id']);
+                    $obj->setNombreUsuario($fila['nombreUsuario']);
+                    $obj->setEmail($fila['email']);
+                    
+                    // 5. Agregamos el objeto al arreglo
+                    array_push($arregloUsuarios, $obj);
+                }
+            }
+        }
+
+        
+        return $arregloUsuarios;
+    }
+
+
+
     //eliminar usuario
 public function eliminar()
     {

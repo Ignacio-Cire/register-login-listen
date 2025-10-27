@@ -1,5 +1,9 @@
 <?php
-include_once '../controller/ABMUsuario.php'; // Incluye el controlador de usuarios
+
+
+include_once '../controller/ABMusuario.php'; // Incluye el controlador de usuarios
+
+
 
 $abmUsuario = new ABMUsuario();
 $usuarios = $abmUsuario->buscar(null); // Busca todos los usuarios
@@ -22,7 +26,6 @@ $usuarios = $abmUsuario->buscar(null); // Busca todos los usuarios
                     <th>ID</th>
                     <th>Nombre Usuario</th>
                     <th>Email</th>
-                    <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -33,7 +36,7 @@ $usuarios = $abmUsuario->buscar(null); // Busca todos los usuarios
                             <td><?php echo $usuario->getId(); ?></td>
                             <td><?php echo $usuario->getNombreUsuario(); ?></td>
                             <td><?php echo $usuario->getEmail(); ?></td>
-                            <td><?php echo ($usuario->getDeshabilitado()) ? 'Deshabilitado' : 'Activo'; ?></td>
+                         
                             <td>
                                 <!-- Botón para actualizar datos del usuario -->
                                 <a href="../accion/actualizarLogin.php?id=<?php echo $usuario->getId(); ?>" class="btn btn-primary btn-sm">Actualizar</a>
